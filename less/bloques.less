@@ -1,0 +1,284 @@
+/* Declaración del tratado de los bloques que componen la página y sostienen contenido para el usuario */
+
+.height-xs {
+	height: 50px;
+	display: block;
+}
+
+.height-sm {
+	height: 150px;
+	display: block;
+}
+
+.height-md {
+	height: 450px;
+	display: block;
+}
+
+.height-lg {
+	height: 1350px;
+	display: block;
+}
+
+/* bloques flexibles */
+
+.initial {
+  -webkit-flex: initial;
+  flex: initial;
+  width: 200px;
+  min-width: 100px;
+}
+
+.none {
+  -webkit-flex: none;
+          flex: none;
+  width: 200px;
+}
+
+.flex1 {
+  -webkit-flex: 1;
+          flex: 1;
+}
+
+.flex2 {
+  -webkit-flex: 2;
+          flex: 2;
+}
+
+/* Bloques de menú inicial */
+
+.fondo-menu-iconos {
+    border: 0 dashed #000;
+    border-radius: 5px;
+    box-shadow: 0 0 11px #7a7a7a;
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
+    padding: 20px;
+}
+
+/*  bloques del index */
+
+.bg-picture {
+    color: white;
+    min-height: 400px;
+    margin: 0 auto;
+    padding: 0;
+
+    h1 {
+      font-size: 65px;
+      letter-spacing: -1px;
+      margin: 0;
+    }
+
+    &.index {
+      background:url(../img/pc7.jpg) 100% 10% no-repeat fixed;
+      background-size: 100%;
+    }
+
+    &.index2 {
+      background:url(../img/pc3.jpg) 100% 10% no-repeat fixed;
+      background-size: 100%;
+    }
+}
+
+/* Navegación */
+
+.user-controls {
+	position: absolute;
+	right: 0;
+	bottom: 30px;
+}
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+.pagination > li {
+  display: inline;
+}
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: @green;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #2a6496;
+  background-color: #eee;
+  border-color: #ddd;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #fff;
+  cursor: default;
+  background-color: @green;
+  border-color: @green;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #777;
+  cursor: not-allowed;
+  background-color: #fff;
+  border-color: #ddd;
+}
+.pagination-lg > li > a,
+.pagination-lg > li > span {
+  padding: 10px 16px;
+  font-size: 18px;
+}
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:first-child > span {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.pagination-lg > li:last-child > a,
+.pagination-lg > li:last-child > span {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.pagination-sm > li > a,
+.pagination-sm > li > span {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+#container-tab {
+    margin: 0 auto;
+    width: 50%;  /* Ancho del contenedor */
+}
+
+#container-tab input {
+	height: 2.5em;
+	visibility: hidden;
+}
+
+#container-tab label {
+	background: #f9f9f9;  /* Fondo de las pestañas */
+	border-radius: .25em .25em 0 0;
+	color: #888;  /* Color del texto de las pestañas */
+	cursor: pointer;
+	display: block;
+	float: left;
+	font-size: 1em;  /* Tamaño del texto de las pestañas */
+	height: 2.5em;
+	line-height: 2.5em;
+	margin-right: .25em;
+	padding: 0 1.5em;
+	text-align: center;
+}
+
+#container-tab input:hover + label {
+	background: #ddd;  /* Fondo de las pestañas al pasar el cursor por encima */
+	color: #666;  /* Color del texto de las pestañas al pasar el cursor por encima */
+}
+
+#container-tab input:checked + label {
+	background: #f1f1f1;  /* Fondo de las pestañas al presionar */
+	color: #999; /* Color de las pestañas al presionar */
+	position: relative;
+	z-index: 6;
+	/*
+	-webkit-transition: .1s;
+	-moz-transition: .1s;
+	-o-transition: .1s;
+	-ms-transition: .1s;
+	*/
+}
+
+#content-tab {
+	background: #f1f1f1;  /* Fondo del contenido */
+	border-radius: 0 .25em .25em .25em;
+	min-height: 20em;  /* Alto del contenido */
+	position: relative;
+	width: 100%;
+	z-index: 5;
+}
+
+#content-tab div {
+	opacity: 0;
+	padding: 1.5em;
+	position: absolute;
+	z-index: -100;
+	/*
+	transition: all linear 0.1s;
+	*/
+}
+
+#content-1 p {
+	clear: both;
+	margin-bottom: 1em;
+}
+#content-1 p.left img {
+	float: left;
+	margin-right: 1em;
+}
+#content-1 p.last {
+	margin-bottom: 0;
+}
+
+#content-2 p {
+	float: left;
+	width: 48.5%;
+}
+#content-2 p.column-right {
+	margin-left: 3%;
+}
+#content-2 p img {
+	display: block;
+	margin: 0 auto 1em auto;
+}
+#content-3 p,
+#content-3 ul {
+	margin-bottom: 1em;
+}
+#content-3 ul {
+	margin-left: 2em;
+}
+
+#container-tab input#tab-1:checked ~ #content-tab #content-1,
+#container-tab input#tab-2:checked ~ #content-tab #content-2,
+#container-tab input#tab-3:checked ~ #content-tab #content-3 {
+    opacity: 1;
+    z-index: 100;
+}

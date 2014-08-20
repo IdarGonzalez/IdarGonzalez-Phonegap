@@ -1,0 +1,93 @@
+/* Variables de colores */
+
+@oil:						#448D8F;//#195962
+@blue: 						#0092B2;
+@green:						#90cd45;
+@beige:  					#DFD3B6;
+@brown:						#59574C;
+@white: 					#FCFCF9;
+@grey: 						#DAD8CC;
+@orange: 					#ED5B41;
+@grey-dark: 				#4C565E;
+@red: 						#AA473D;
+@blue-dark: 				#0B6073;
+
+/* aplicación de colores */
+.beige {color: @beige;}
+.blue {color: @blue;}
+.grey-dark {color: @grey-dark;}
+.green {color: @green;}
+.oil {color: @oil;}
+.brown {color: @brown;}
+.white {color: @white;}
+.grey {color: @grey;}
+.orange {color: @orange;}
+.red {color: @red;}
+.blue-dark {color: @blue-dark;}
+
+/* Variables de fondos */
+.bg-blue {background-color: @blue;}
+.bg-grey-dark {background-color: @grey-dark;}
+.bg-green {background-color: @green;}
+.bg-oil{background-color: @oil;}
+.bg-brown {background-color: @brown;}
+.bg-white {background-color: @white;}
+.bg-grey {background-color: @grey;}
+.bg-orange { background-color: @orange;}
+.bg-red { background-color: @red;}
+.bg-beige { background-color: @beige;}
+.bg-blue-dark { background-color: @blue-dark;}
+
+/* Variables auxiliares */
+
+.border-red {
+	border:1px solid red;
+}
+
+/* Variables tipográficas */
+
+@sans: 						'Lato', sans-serif,;
+@slab: 						'Roboto slab', serif,;
+
+/* Variables iconográficas */
+
+//== Iconography
+//
+//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
+
+//** Load fonts from this directory.
+@icon-font-path:          "../fonts/";
+//** File name for all font files.
+@icon-font-name:          "glyphicons-halflings-regular";
+//** Element ID within SVG icon file.
+@icon-font-svg-id:        "glyphicons_halflingsregular";
+/* Variables responsive - Media Queries */
+
+// Extra small screen / phone
+// Note: Deprecated @screen-xs and @screen-phone as of v3.0.1
+@screen-xs:                  480px;
+@screen-xs-min:              @screen-xs;
+@screen-phone:               @screen-xs-min;
+
+// Small screen / tablet
+// Note: Deprecated @screen-sm and @screen-tablet as of v3.0.1
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@screen-tablet:              @screen-sm-min;
+
+// Medium screen / desktop
+// Note: Deprecated @screen-md and @screen-desktop as of v3.0.1
+@screen-md:                  992px;
+@screen-md-min:              @screen-md;
+@screen-desktop:             @screen-md-min;
+
+// Large screen / wide desktop
+// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+@screen-lg:                  1420px;
+@screen-lg-min:              @screen-lg;
+@screen-lg-desktop:          @screen-lg-min;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:              (@screen-sm-min - 1);
+@screen-sm-max:              (@screen-md-min - 1);
+@screen-md-max:              (@screen-lg-min - 1);

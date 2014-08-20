@@ -1,0 +1,116 @@
+/* Declaración del tratado de la "página" mediante contenedores */
+
+body { 
+	font-family: 'Lato', Helvetica, sans-serif;
+	color: #999; 
+  height: 100%;
+}
+
+header {
+	background-color: white;
+}
+
+footer{
+  background-color: @green;
+  color: @white;
+  padding: 15px 0;
+  height: 90px;
+	text-align:center;
+	font-size:0.8em;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  .logo-organizame {
+    font-size: 24px;
+    color: @white;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+nav {
+	position: absolute;
+	right: 0;
+	bottom: 0px;
+
+  a {
+    font-size: 15px;
+    font-weight: 300;
+    padding: 0 0 5px 0;
+    margin: 0 15px;
+
+    &:hover {
+      color: @blue;
+      border-bottom: 2px solid @blue;
+        -webkit-transition: all .1s;
+        -moz-transition:all .1s;
+        transition:all .1s;
+    }
+  }
+
+  .current-link {
+    color: @green;
+      border-bottom: 2px solid @green;
+
+      &:hover {
+        color: @green; 
+        border-bottom: 2px solid @green;
+      }
+    }
+
+}
+
+.wrap {
+  min-height: 100%;
+  position: relative;
+}
+
+.content {
+  padding: 10px 0 90px 0;
+}
+
+.container{
+	width:960px;
+	padding: 20px 0;
+
+  &.no-padding {
+    padding: 0;
+  }
+}
+
+.wrap-flex {
+	display: -webkit-flex;
+  	display: flex;
+  	background-color: @beige;
+  	border:2px solid @brown;
+  	min-height: 200px;
+}
+
+  //  Responsive 
+
+  //  Extra small screen / phone
+  @media(max-width: @screen-xs-max){
+
+  	.container{
+		width:90%;
+	}
+  }
+
+  //  Small screen / tablet
+  @media (min-width: @screen-sm) and (max-width: @screen-sm-max){
+
+	.container{
+		width:85%;
+	}
+  }
+
+  //  Medium screen / desktop
+  @media (min-width: @screen-md) and (max-width: @screen-md-max){
+
+  }
+
+  //  Large screen / wide desktop
+  @media (min-width: @screen-lg){
+
+  }

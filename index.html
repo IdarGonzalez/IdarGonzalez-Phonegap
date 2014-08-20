@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" href="css/themes/organizame.css" />
+        <link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css" />
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.css" />
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.3/jquery.mobile-1.4.3.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="bower_components/platform/platform.js"></script>
+        <!--<link rel="import" href="bower_components/core-elements/core-elements.html">-->
+        <!--<link rel="import" href="bower_components/paper-elements/paper-elements.html">-->
+        <link rel="import" href="bower_components/paper-toggle-button/paper-toggle-button.html">
+        <link rel="import" href="bower_components/paper-fab/paper-fab.html">
+        <link rel="import" href="bower_components/paper-input/paper-input.html">
+        <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+        <link rel="import" href="bower_components/paper-item/paper-item.html">
+        <link rel="import" href="bower_components/core-collapse/core-collapse.html">
+        <link rel="import" href="bower_components/core-field/core-field.html">
+        <link rel="import" href="bower_components/core-scaffold/core-scaffold.html">
+        <title>Organizame</title>
+    </head>
+    <body>
+        <div data-role='page' id='page1' data-theme='d'>
+            <div data-role='header'>
+                <div class='bg-green'>
+                    <h1 class='white'>Polymer</h1>
+                    <div data-role='navbar'>
+                        <ul>
+                            <li><a href="#page1">Polymer</a></li>
+                            <li><a href="#pagescaffold">Scaffold</a></li>
+                            <li><a href="#page2">jQuery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-role='ui-content'>
+                <h1>elementos polymer</h1>
+                <section>
+                    <p>Toggle button</p>
+                    <div layout="" horizontal="" center="">
+                        <div flex="">Wi-Fi</div>
+                        <paper-toggle-button checked="" tabindex="0" aria-pressed="false" role="button">
+                            <div id="toggleContainer">
+                                <div id="toggleBar"></div>
+                                <paper-radio-button id="toggleRadio" on-trackend="{{ trackEnd }}" on-trackx="{{ trackx }}" on-trackstart="{{ trackStart }}" toggles="" aria-checked="false" tabindex="0" role="radio" touch-action="pan-y">
+                                    <div id="radioContainer" class="">
+                                        <div id="offRadio"></div>
+                                        <div id="onRadio" class=""></div>
+                                        <paper-ripple id="ink" class="circle recenteringTouch" checked="">
+                                            <canvas id="canvas" width="96px" height="96px"></canvas>
+                                        </paper-ripple>
+                                </div>
+                                <div id="radioLabel" hidden="" aria-hidden="true"></div>
+                                </paper-radio-button>
+                            </div>
+                        </paper-toggle-button>
+                    </div>
+                    <div layout="" horizontal="" center="">
+                        <div flex="">Bluetooth</div>
+                        <paper-toggle-button class="blue" tabindex="0" aria-pressed="false" role="button">
+                            <div id="toggleContainer">
+                                <div id="toggleBar"></div>
+                                <paper-radio-button id="toggleRadio" on-trackend="{{ trackEnd }}" on-trackx="{{ trackx }}" on-trackstart="{{ trackStart }}" toggles="" aria-checked="false" tabindex="0" role="radio" touch-action="pan-y">
+                            <div id="radioContainer" class="">
+                                <div id="offRadio"></div>
+                                <div id="onRadio" class=""></div>
+                                <paper-ripple id="ink" class="circle recenteringTouch" checked="">
+                            </div>
+                            <div id="radioLabel" hidden="" aria-hidden="true"></div>
+                                </paper-radio-button>
+                            </div>
+                        </paper-toggle-button>
+                    </div>
+                </section>
+                <section>
+                    <p>Floating action button</p>
+                    <paper-fab icon="favorite"></paper-fab>
+                </section>
+                <section>
+                    <p>Input</p>
+                    <paper-input label="Input por defecto"></paper-input>
+                    <paper-input multiline label="Input múltiple líneas"></paper-input>
+                    <paper-input floatingLabel label="Input floating label"></paper-input>
+                </section>
+                <section>
+                    <p>Checkbox</p>
+                    <paper-checkbox></paper-checkbox>
+                    <paper-checkbox checked></paper-checkbox>
+                </section>
+                <section>
+                    <p>Items</p>
+                    <core-menu>
+                        <paper-item icon="refresh" label="Refresh"></paper-item>
+                        <paper-item label="Help"></paper-item>
+                        <paper-item label="Sign Out"></paper-item>
+                        <paper-item icon="home" label="Enlace a Polymer">
+                            <a href="http://www.polymer-project.org"></a>
+                        </paper-item>
+                    </core-menu>
+                </section>
+                <section>
+                    <p>Collapse</p>
+                    <button on-click="{{toggle}}">activar collapse</button>
+                    <core-collapse id="collapse">
+                      ... lala ...
+                    </core-collapse>
+                </section>
+                <section>
+                    <core-field>
+                      <core-icon icon="menu"></core-icon>
+                      <label>I'm a label!</label>
+                      <input placeholder="I have a label" flex>
+                    </core-field>
+                    <core-field layout="" horizontal="" center="">
+                        <input flex="" placeholder="I have no icon">
+                    </core-field>
+                </section>
+                <section style="background: steelblue;">
+                <button onclick="document.querySelector('#collapse1').toggle()">toggle collapse</button>
+                <core-collapse id="collapse1" class="box core-collapse-closed" style="height: 0px; overflow: hidden; transition: height 0.33s ease 0s;" fixedsize="">
+                <div class="content">Forma temperiemque cornua sidera dissociata cornua recessit innabilis ligavit: solidumque coeptis nullus caelum sponte phoebe di regat mentisque tanta austro capacius amphitrite sui quin postquam semina fossae liquidum umor galeae coeptis caligine liberioris quin liquidum matutinis invasit posset: flexi glomeravit radiis certis invasit oppida postquam onerosior inclusum dominari opifex terris pace finxit quam aquae nunc sine altae auroram quam habentem homo totidemque scythiam in pondus ensis tegit caecoque poena lapidosos humanas coeperunt poena aetas totidem nec natura aethera locavit caelumque distinxit animalibus phoebe cingebant moderantum porrexerat terrae possedit sua sole diu summaque obliquis melioris orbem</div>
+                </core-collapse>
+                </section>
+            </div>
+            <div data-role='footer'>
+                <h2>&copy; 2014</h2>
+            </div>
+        </div>
+        <div data-role='page' id='pagescaffold'>
+            <core-scaffold>
+              <core-header-panel navigation flex mode="seamed">
+                <core-toolbar>Menú lateral</core-toolbar>
+                <core-menu theme="core-light-theme">
+                    <core-item icon="settings" label="item1">
+                        <a href='#page1'>pagina 1, elementos polymer</a>
+                    </core-item>
+                    <core-item icon="settings" label="item2">
+                        <a href='#page2' data-transition='slide'>pagina 2, elementos jQuery Mobile</a>
+                    </core-item>
+                </core-menu>
+              </core-header-panel>
+              <div tool>Título</div>
+              <div>
+                <div data-role='navbar'>
+                        <ul>
+                            <li><a href="#page1">Polymer</a></li>
+                            <li><a href="#pagescaffold">Scaffold</a></li>
+                            <li><a href="#page2">jQuery</a></li>
+                        </ul>
+                    </div>
+                Contenido va aquí...
+              </div>
+
+            </core-scaffold>
+        </div>
+        <div data-role='page' id='page2' data-theme='d'>
+            <div data-role='header'>
+                <div class='bg-green'>
+                    <h1 class='white'>jQuery</h1>
+                    <div data-role='navbar'>
+                        <ul>
+                            <li><a href="#page1">Polymer</a></li>
+                            <li><a href="#pagescaffold">Scaffold</a></li>
+                            <li><a href="#page2">jQuery</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-role='ui-content'>
+                <h1>elementos jquery</h1>
+                <section>
+                <p>Elemento Collapse</p>
+                <div data-role='collapsible'>
+                    <h1>Ejecutar collapse</h1>
+                    <p>Contenido colapsado y oculto. Esto es una alternativa al collapse que no funciona de polymer (por ahora no sé por qué), sin embargo este se arma a través de jQuery Mobile.</p>
+                </div>
+                <div data-role='collapsible'>
+                    <h1>Imagen oculta</h1>
+                    <img src="img/logo.png" alt="logo de phonegap">Phonegap
+                </div>
+                </section>
+                <section>
+                    <p>Elementos de input</p>
+                    <form>
+                        <label for='input1'>Introducir</label>
+                        <textarea name='input1' id='input1' placeholder='área de texto'></textarea>
+                        <label for='rango'>Rango del 0 al 10</label>
+                        <input type='range' name='rango' id='rango' min='0' max='10' />
+                        <input type='submit' value='botón' />
+                    </form>
+                </section>
+            </div>
+            <div data-role='footer'>
+                <h2>&copy; 2014</h2>
+            </div>
+        </div>
+
+        <!--<div class="app">
+            <h1 class='green'>Organizame v2</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Esperando iniciar</p>
+                <p class="event received">Iniciando</p>
+            </div>
+            <h2><a href='index-polymer.html'>Enlace</a></h2>
+        </div>-->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        <script type="text/javascript">
+            toggle: function() {
+                this.$.collapse.toggle();
+            }
+        </script>
+    </body>
+</html>
